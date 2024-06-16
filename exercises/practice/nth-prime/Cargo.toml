@@ -4,3 +4,6 @@ name = "nth_prime"
 version = "2.1.0"
 
 [dependencies]
+[[bin]]
+name = "nth_prime" # 这是可执行文件的名字，默认会生成与之同名的可执行文件
+path = "src/lib.rs"      # 这是指向包含 `fn main()` 的 Rust 文件的路径，对于大多数项目来说通常是 "src/main.rs"
