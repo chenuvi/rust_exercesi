@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-pub fn anagrams_for<'a>(word: &str, possible_anagrams: &[&'a &str]) -> HashSet<&'a str> {
+pub fn anagrams_for<'a>(word: &str, possible_anagrams: &[&'a str]) -> HashSet<&'a str> {
     let lower = word.to_lowercase();
     let sorted = sort(&lower);
     possible_anagrams
