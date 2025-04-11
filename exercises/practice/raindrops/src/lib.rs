@@ -1,20 +1,16 @@
 pub fn raindrops(n: u32) -> String {
-    let is_pling = |n| n % 3 == 0;
-    let is_plang = |n| n % 5 == 0;
-    let is_plong = |n| n % 7 == 0;
-    let mut res = String::new();
-    if is_pling(n) {
-        res.push_str("Pling");
+    let mut sound = String::new();
+    if n % 3 == 0 {
+        sound += "Pling";
     }
-    if is_plang(n) {
-        res.push_str("Plang");
+    if n % 5 == 0 {
+        sound += "Plang";
     }
-    if is_plong(n) {
-        res.push_str("Plong");
+    if n % 7 == 0 {
+        sound += "Plong";
     }
-    if res.is_empty() {
-        let s = format!("{}", n);
-        res.push_str(&s);
+    if sound.is_empty() {
+        sound = n.to_string();
     }
-    res
+    sound
 }
